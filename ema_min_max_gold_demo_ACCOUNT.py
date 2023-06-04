@@ -40,10 +40,10 @@ def buy(direction , duration = 15 ,ws2 = websocket.WebSocket(), martingale = Tru
             print("Authorized OK, so now buy Contract")
             if stake <= 100:
                 json_data1 = json.dumps({"buy": 1, "subscribe": 1,"price":100, "parameters": {
-                                        "amount": stake , "basis": "stake", "contract_type": f"{direction}", "currency": "USD", "duration": duration, "duration_unit": "m", "symbol": "R_100"}})
+                                        "amount": stake , "basis": "stake", "contract_type": f"{direction}", "currency": "USD", "duration": duration, "duration_unit": "m", "symbol": "frxXAUUSD"}})
             else:
                 json_data1 = json.dumps({"buy": 1, "subscribe": 1,"price":100, "parameters": {
-                                        "amount": 100 , "basis": "stake", "contract_type": f"{direction}", "currency": "USD", "duration": duration, "duration_unit": "m", "symbol": "R_100"}})
+                                        "amount": 100 , "basis": "stake", "contract_type": f"{direction}", "currency": "USD", "duration": duration, "duration_unit": "m", "symbol": "frxXAUUSD"}})
  
             ws2.send(json_data1)
             # Our buy request was successful let's print the results.
