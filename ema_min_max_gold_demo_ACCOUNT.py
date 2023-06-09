@@ -20,7 +20,7 @@ def buy(direction , duration = 15 ,ws2 = websocket.WebSocket(), martingale = Tru
     ws2.connect(apiUrl)
     data = json.dumps({'authorize': token})
     ws2.send(data)
-    stake_steps = [0.5 , 0.58 , 1.24 , 2.6 , 5.71 , 12.29]
+    stake_steps = [0.5 , 1.5 , 4.5 , 13 , 39 , 118.5]
     stake = stake_steps[steps]
     global profit_target
     
